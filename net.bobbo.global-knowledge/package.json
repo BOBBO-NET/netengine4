@@ -1,0 +1,13 @@
+{
+  "name": "net.bobbo.global-knowledge",
+  "version": "0.0.1",
+  "displayName": "Global Knowledge",
+  "author": {
+    "name": "BOBBO-NET",
+    "url": "https://bobbo.net"
+  },
+  "dependencies": {
+    "net.bobbo.editor.search-window": "0.0.1",
+    "net.bobbo.json-data": "0.0.1"
+  }
+}

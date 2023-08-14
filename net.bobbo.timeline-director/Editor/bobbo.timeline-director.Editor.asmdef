@@ -1,0 +1,22 @@
+{
+    "name": "BobboNet.Editor.TimelineDirector",
+    "references": [
+        "BobboNet.TimelineDirector",
+        "BobboNet.XNode.GlobalKnowledge",
+        "BobboNet.Editor.XNode.GlobalKnowledge",
+        "Unity.Timeline",
+        "XNode",
+        "XNodeEditor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

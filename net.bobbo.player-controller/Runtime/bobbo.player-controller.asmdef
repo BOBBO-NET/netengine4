@@ -1,0 +1,17 @@
+{
+    "name": "BobboNet.PlayerController",
+    "references": [
+        "Zenject",
+        "BobboNet.MultiLock",
+        "BobboNet.Vector3Extensions"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

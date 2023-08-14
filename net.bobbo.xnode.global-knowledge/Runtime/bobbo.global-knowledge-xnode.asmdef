@@ -1,0 +1,17 @@
+{
+    "name": "BobboNet.XNode.GlobalKnowledge",
+    "references": [
+        "Unity.Timeline",
+        "BobboNet.GlobalKnowledge",
+        "XNode"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

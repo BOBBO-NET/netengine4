@@ -1,0 +1,10 @@
+{
+  "name": "net.bobbo.extensions.vector3",
+  "version": "0.0.1",
+  "displayName": "Vector3 Extensions",
+  "author": {
+    "name": "BOBBO-NET",
+    "url": "https://bobbo.net"
+  },
+  "dependencies": {}
+}

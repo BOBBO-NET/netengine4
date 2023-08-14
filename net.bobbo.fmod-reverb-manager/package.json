@@ -1,0 +1,12 @@
+{
+  "name": "net.bobbo.fmod-reverb-manager",
+  "version": "0.0.2",
+  "displayName": "FMOD Reverb Manager",
+  "author": {
+    "name": "BOBBO-NET",
+    "url": "https://bobbo.net"
+  },
+  "dependencies": {
+    "net.bobbo.extenject": "9.3.1"
+  }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "BobboNet.CameraAudioListener.FMOD",
+    "references": [
+        "Zenject",
+        "FMODUnity",
+        "BobboNet.CameraAudioListener"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

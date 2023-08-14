@@ -1,0 +1,12 @@
+{
+  "name": "net.bobbo.player-behaviour.health",
+  "version": "0.0.1",
+  "displayName": "Player Behaviour Health",
+  "author": {
+    "name": "BOBBO-NET",
+    "url": "https://bobbo.net"
+  },
+  "dependencies": {
+    "net.bobbo.player-controller": "0.0.1"
+  }
+}

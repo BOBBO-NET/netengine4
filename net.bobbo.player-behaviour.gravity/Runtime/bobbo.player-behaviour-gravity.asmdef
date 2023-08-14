@@ -1,0 +1,17 @@
+{
+    "name": "BobboNet.PlayerBehaviour.Gravity",
+    "references": [
+        "Zenject",
+        "BobboNet.PlayerController",
+        "BobboNet.MultiLock"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

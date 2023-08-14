@@ -1,0 +1,10 @@
+{
+  "name": "net.bobbo.extensions.float",
+  "version": "0.0.1",
+  "displayName": "Float Extensions",
+  "author": {
+    "name": "BOBBO-NET",
+    "url": "https://bobbo.net"
+  },
+  "dependencies": {}
+}
