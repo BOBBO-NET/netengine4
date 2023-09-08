@@ -1,0 +1,239 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8324328896639494795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c52e5b82ea1c6b46a5d7b85499ea2b1, type: 3}
+  m_Name: Timeline
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 40, y: -120}
+  ports:
+    keys:
+    - previous
+    - e0
+    - e1
+    values:
+    - _fieldName: previous
+      _node: {fileID: -8324328896639494795}
+      _typeQualifiedName: TimelineNode+EmptyClass, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: e0
+        node: {fileID: -8253332116369792403}
+        reroutePoints: []
+      - fieldName: e0
+        node: {fileID: 1132524334736212043}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: e0
+      _node: {fileID: -8324328896639494795}
+      _typeQualifiedName: TimelineNode+EmptyClass, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: previous
+        node: {fileID: -3479344785375957295}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 1
+      _dynamic: 1
+    - _fieldName: e1
+      _node: {fileID: -8324328896639494795}
+      _typeQualifiedName: TimelineNode+EmptyClass, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: previous
+        node: {fileID: 1132524334736212043}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 1
+      _dynamic: 1
+  timeline: {fileID: 11400000, guid: 1329fdc373884fd48bc60d401a6bb139, type: 2}
+  wrapMode: 1
+  exits:
+  - conditionType: 1
+    name: breakFocus
+    boolState: 0
+    floatValue: 0
+    floatState: 0
+  - conditionType: 3
+    name: annoyed
+    boolState: 0
+    floatValue: 5
+    floatState: 4
+--- !u!114 &-8253332116369792403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c52e5b82ea1c6b46a5d7b85499ea2b1, type: 3}
+  m_Name: Timeline
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -248, y: -88}
+  ports:
+    keys:
+    - previous
+    - e0
+    values:
+    - _fieldName: previous
+      _node: {fileID: -8253332116369792403}
+      _typeQualifiedName: TimelineNode+EmptyClass, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: e0
+      _node: {fileID: -8253332116369792403}
+      _typeQualifiedName: TimelineNode+EmptyClass, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: previous
+        node: {fileID: -8324328896639494795}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 1
+      _dynamic: 1
+  timeline: {fileID: 11400000, guid: abe9dd372157a894590bff1c0d0ae4cc, type: 2}
+  wrapMode: 2
+  exits:
+  - conditionType: 0
+    name: 
+    boolState: 0
+    floatValue: 0
+    floatState: 0
+--- !u!114 &-3479344785375957295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c52e5b82ea1c6b46a5d7b85499ea2b1, type: 3}
+  m_Name: Timeline
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 328, y: -24}
+  ports:
+    keys:
+    - previous
+    - e0
+    values:
+    - _fieldName: previous
+      _node: {fileID: -3479344785375957295}
+      _typeQualifiedName: TimelineNode+EmptyClass, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: e0
+        node: {fileID: -8324328896639494795}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: e0
+      _node: {fileID: -3479344785375957295}
+      _typeQualifiedName: TimelineNode+EmptyClass, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 1
+      _dynamic: 1
+  timeline: {fileID: 11400000, guid: abe9dd372157a894590bff1c0d0ae4cc, type: 2}
+  wrapMode: 1
+  exits:
+  - conditionType: 0
+    name: 
+    boolState: 0
+    floatValue: 0
+    floatState: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25860dd6216b36048b52402ac2eab3ea, type: 3}
+  m_Name: TestGraph
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -8253332116369792403}
+  - {fileID: -8324328896639494795}
+  - {fileID: -3479344785375957295}
+  - {fileID: 1132524334736212043}
+  startingNode: {fileID: -8253332116369792403}
+--- !u!114 &1132524334736212043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c52e5b82ea1c6b46a5d7b85499ea2b1, type: 3}
+  m_Name: Timeline
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 296, y: 264}
+  ports:
+    keys:
+    - previous
+    - e0
+    values:
+    - _fieldName: previous
+      _node: {fileID: 1132524334736212043}
+      _typeQualifiedName: TimelineNode+EmptyClass, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: e1
+        node: {fileID: -8324328896639494795}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: e0
+      _node: {fileID: 1132524334736212043}
+      _typeQualifiedName: TimelineNode+EmptyClass, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: previous
+        node: {fileID: -8324328896639494795}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 1
+      _dynamic: 1
+  timeline: {fileID: 11400000, guid: c3c31db649af39f45b043e1084d5d1c3, type: 2}
+  wrapMode: 1
+  exits:
+  - conditionType: 3
+    name: annoyed
+    boolState: 0
+    floatValue: 5
+    floatState: 1

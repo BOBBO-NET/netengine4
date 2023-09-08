@@ -1,0 +1,21 @@
+{
+    "name": "BobboNet.Editor.XNode.GlobalKnowledge",
+    "references": [
+        "Unity.Timeline",
+        "BobboNet.GlobalKnowledge",
+        "BobboNet.Editor.GlobalKnowledge",
+        "BobboNet.Editor.SearchWindow",
+        "BobboNet.XNode.GlobalKnowledge",
+        "XNode",
+        "XNodeEditor"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

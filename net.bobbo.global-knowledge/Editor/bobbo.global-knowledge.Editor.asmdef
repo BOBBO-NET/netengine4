@@ -1,0 +1,17 @@
+{
+    "name": "BobboNet.Editor.GlobalKnowledge",
+    "references": [
+        "BobboNet.GlobalKnowledge",
+        "BobboNet.Editor.SearchWindow",
+        "BobboNet.JSONData"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

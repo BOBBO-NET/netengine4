@@ -1,0 +1,10 @@
+{
+  "name": "net.bobbo.json-data",
+  "version": "0.1.0",
+  "displayName": "JSON Data",
+  "author": {
+    "name": "BOBBO-NET",
+    "url": "https://bobbo.net"
+  },
+  "dependencies": {}
+}

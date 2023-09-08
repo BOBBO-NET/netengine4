@@ -1,0 +1,10 @@
+{
+  "name": "net.bobbo.multi-lock",
+  "version": "0.1.0",
+  "displayName": "Multi-Lock",
+  "author": {
+    "name": "BOBBO-NET",
+    "url": "https://bobbo.net"
+  },
+  "dependencies": {}
+}

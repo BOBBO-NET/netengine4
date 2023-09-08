@@ -1,0 +1,13 @@
+{
+  "name": "net.bobbo.camera-audio-listener-fmod",
+  "version": "0.1.0",
+  "displayName": "Camera Audio Listener FMOD",
+  "author": {
+    "name": "BOBBO-NET",
+    "url": "https://bobbo.net"
+  },
+  "dependencies": {
+    "net.bobbo.extenject": "9.3.1",
+    "net.bobbo.camera-audio-listener": "0.1.0"
+  }
+}

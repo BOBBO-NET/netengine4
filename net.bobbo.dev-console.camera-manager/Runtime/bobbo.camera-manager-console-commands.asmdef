@@ -1,0 +1,17 @@
+{
+    "name": "BobboNet.DevConsole.CameraManager",
+    "references": [
+        "Zenject",
+        "BobboNet.CameraManager",
+        "BobboNet.DevConsole"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

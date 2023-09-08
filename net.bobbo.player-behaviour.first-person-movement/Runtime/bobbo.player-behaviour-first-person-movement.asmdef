@@ -1,0 +1,16 @@
+{
+    "name": "BobboNet.PlayerBehaviour.FirstPersonMovement",
+    "references": [
+        "BobboNet.PlayerController",
+        "BobboNet.PlayerBehaviour.Gravity"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

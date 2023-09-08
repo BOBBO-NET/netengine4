@@ -1,0 +1,14 @@
+{
+  "name": "net.bobbo.player-behaviour.gravity",
+  "version": "0.1.0",
+  "displayName": "Player Behaviour Gravity",
+  "author": {
+    "name": "BOBBO-NET",
+    "url": "https://bobbo.net"
+  },
+  "dependencies": {
+    "net.bobbo.extenject": "9.3.1",
+    "net.bobbo.player-controller": "0.1.0",
+    "net.bobbo.multi-lock": "0.1.0"
+  }
+}
