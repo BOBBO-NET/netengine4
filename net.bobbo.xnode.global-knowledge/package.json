@@ -1,6 +1,6 @@
 {
   "name": "net.bobbo.xnode.global-knowledge",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "displayName": "Global Knowledge XNode",
   "author": {
     "name": "BOBBO-NET",
@@ -9,6 +9,6 @@
   "dependencies": {
     "com.unity.timeline": "1.0.0",
     "com.github.siccity.xnode": "1.8.0",
-    "net.bobbo.global-knowledge": "1.0.0"
+    "net.bobbo.global-knowledge": "0.1.0"
   }
 }

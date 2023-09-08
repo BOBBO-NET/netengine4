@@ -1,6 +1,6 @@
 {
   "name": "net.bobbo.timeline-director",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "displayName": "Timeline Director",
   "author": {
     "name": "BOBBO-NET",
@@ -9,7 +9,7 @@
   "dependencies": {
     "com.unity.timeline": "1.0.0",
     "com.github.siccity.xnode": "1.8.0",
-    "net.bobbo.global-knowledge": "1.0.0",
-    "net.bobbo.xnode.global-knowledge": "1.0.0"
+    "net.bobbo.global-knowledge": "0.1.0",
+    "net.bobbo.xnode.global-knowledge": "0.1.0"
   }
 }

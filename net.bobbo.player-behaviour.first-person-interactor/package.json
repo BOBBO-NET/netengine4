@@ -1,12 +1,12 @@
 {
   "name": "net.bobbo.player-behaviour.first-person-interactor",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "displayName": "Player Behaviour 1st Person Interactor",
   "author": {
     "name": "BOBBO-NET",
     "url": "https://bobbo.net"
   },
   "dependencies": {
-    "net.bobbo.player-controller": "1.0.0"
+    "net.bobbo.player-controller": "0.1.0"
   }
 }

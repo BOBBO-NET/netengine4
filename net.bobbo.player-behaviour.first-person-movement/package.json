@@ -1,13 +1,13 @@
 {
   "name": "net.bobbo.player-behaviour.first-person-movement",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "displayName": "Player Behaviour 1st Person Movement",
   "author": {
     "name": "BOBBO-NET",
     "url": "https://bobbo.net"
   },
   "dependencies": {
-    "net.bobbo.player-controller": "1.0.0",
-    "net.bobbo.player-behaviour.gravity": "1.0.0"
+    "net.bobbo.player-controller": "0.1.0",
+    "net.bobbo.player-behaviour.gravity": "0.1.0"
   }
 }
