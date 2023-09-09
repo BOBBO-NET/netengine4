@@ -22,6 +22,7 @@ namespace BobboNet
             Container.Bind<DevConsoleCommandBase>().To<ConsoleCommands.Help>().AsSingle();
             Container.Bind<DevConsoleCommandBase>().To<ConsoleCommands.ListScenes>().AsSingle();
             Container.Bind<DevConsoleCommandBase>().To<ConsoleCommands.SetScene>().AsSingle();
+            Container.Bind<DevConsoleCommandBase>().To<ConsoleCommands.LogWriter>().AsSingle();
         }
     }
 }
