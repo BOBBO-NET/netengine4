@@ -5,6 +5,10 @@ using Zenject;
 using TMPro;
 using System.Text;
 
+#if HAS_NEW_INPUT_SYSTEM
+using UnityEngine.InputSystem;
+#endif
+
 namespace BobboNet
 {
     [RequireComponent(typeof(Canvas))]
@@ -99,7 +103,7 @@ namespace BobboNet
                 OnUpdatedLogs();
             }
 
-            if (Input.GetKeyDown(KeyCode.BackQuote) || Input.GetKeyDown(KeyCode.Escape))
+            if (IsExitConsoleKeyDown())
             {
                 SetState(false);
             }
@@ -107,7 +111,7 @@ namespace BobboNet
 
         private void UpdateWhileClosed()
         {
-            if (Input.GetKeyDown(KeyCode.BackQuote) && Input.GetKey(KeyCode.LeftShift))
+            if (IsOpenConsoleKeyDown())
             {
                 SetState(true);
             }
@@ -157,7 +161,7 @@ namespace BobboNet
 
         private void OnInputFieldEndEdit(string inp)
         {
-            if (!(consoleOpened && Input.GetButtonDown("Submit"))) return;
+            if (!(consoleOpened && IsSubmitKeyDown())) return;
 
             // Pass the input into the dev console, and process it
             Debug.Log(consoleLogic.ProcessCommand(inp));
@@ -173,6 +177,33 @@ namespace BobboNet
             }
 
             logText.text = sb.ToString();
+        }
+
+        private bool IsExitConsoleKeyDown()
+        {
+#if HAS_NEW_INPUT_SYSTEM
+            return Keyboard.current.backquoteKey.wasPressedThisFrame || Keyboard.current.escapeKey.wasPressedThisFrame;
+#else
+            return Input.GetKeyDown(KeyCode.BackQuote) || Input.GetKeyDown(KeyCode.Escape);
+#endif
+        }
+
+        private bool IsOpenConsoleKeyDown()
+        {
+#if HAS_NEW_INPUT_SYSTEM
+            return Keyboard.current.backquoteKey.wasPressedThisFrame && Keyboard.current.leftShiftKey.isPressed;
+#else
+            return Input.GetKeyDown(KeyCode.BackQuote) && Input.GetKey(KeyCode.LeftShift);
+#endif
+        }
+
+        private bool IsSubmitKeyDown()
+        {
+#if HAS_NEW_INPUT_SYSTEM
+            return Keyboard.current.enterKey.wasPressedThisFrame || Keyboard.current.numpadEnterKey.wasPressedThisFrame;
+#else
+            return Input.GetButtonDown("Submit");
+#endif
         }
     }
 }
