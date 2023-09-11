@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6d7aa16baa9884bb6709467e6320ce, type: 3}
   m_Name: DemoLights
   m_EditorClassIdentifier: 
-  DefaultValue: 0
+  DefaultValue: 2

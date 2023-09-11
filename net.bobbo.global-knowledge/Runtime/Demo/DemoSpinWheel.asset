@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de1e7f40bb906f047bd9552320a1a615, type: 3}
   m_Name: DemoSpinWheel
   m_EditorClassIdentifier: 
-  DefaultValue: 0
+  DefaultValue: 1
