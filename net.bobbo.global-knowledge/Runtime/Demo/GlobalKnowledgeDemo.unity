@@ -409,6 +409,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08834985d5eac0741bd967c8182ba2d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  newCondition:
+    TargetKnowledge: {fileID: 11400000, guid: b6dbfc2aff62a7446ae22630f99282c8, type: 2}
+    TargetCase: 0
+    Equals:
+      Value: 0
+    GreaterThan:
+      Value: 0
+    LessThan:
+      Value: 0
   type: 1
   knowledgeAsFloat: {fileID: 0}
   knowledgeAsInt: {fileID: 11400000, guid: 917e6206c8eae114a83cf892a70667ff, type: 2}
@@ -1740,6 +1749,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08834985d5eac0741bd967c8182ba2d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  newCondition:
+    TargetKnowledge: {fileID: 0}
+    TargetCase: 0
+    Equals:
+      Value: 0
+    GreaterThan:
+      Value: 0
+    LessThan:
+      Value: 0
   type: 0
   knowledgeAsFloat: {fileID: 11400000, guid: b6dbfc2aff62a7446ae22630f99282c8, type: 2}
   knowledgeAsInt: {fileID: 0}
