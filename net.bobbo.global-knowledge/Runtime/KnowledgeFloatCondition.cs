@@ -15,6 +15,8 @@ namespace BobboNet.Knowledge
         public class CaseGreaterThan : KnowledgeCaseGenericGreaterThan<float> { }
         [System.Serializable]
         public class CaseLessThan : KnowledgeCaseGenericLessThan<float> { }
+        [System.Serializable]
+        public class CaseEqualsKnowledge : KnowledgeCaseGenericEqualsKnowledge<KnowledgeFloat> { }
 
         //
         //  Public Properties
@@ -23,6 +25,7 @@ namespace BobboNet.Knowledge
         public new CaseEquals Equals;
         public CaseGreaterThan GreaterThan;
         public CaseLessThan LessThan;
+        public CaseEqualsKnowledge EqualsKnowledge;
 
         //
         //  Initialization
@@ -31,6 +34,7 @@ namespace BobboNet.Knowledge
         public override IEnumerable<IKnowledgeCase> GetCases() => new IKnowledgeCase[]
         {
             Equals,
+            EqualsKnowledge,
             GreaterThan,
             LessThan
         };

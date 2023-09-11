@@ -49,7 +49,7 @@ namespace BobboNet.Editor.Knowledge
                     selectedCase = knowledgeCondition.GetCases().ToArray()[targetCaseProp.intValue];
                     selectedProp = property.FindPropertyRelative(selectedCase.GetName());
 
-                    additionalBoxHeight = base.GetPropertyHeight(selectedProp, label);
+                    additionalBoxHeight = EditorGUI.GetPropertyHeight(selectedProp, label);
                 }
 
                 // Calc position for the background
@@ -95,7 +95,7 @@ namespace BobboNet.Editor.Knowledge
             var selectedCase = knowledgeCondition.GetCases().ToArray()[targetCaseProp.intValue];
             var selectedProp = property.FindPropertyRelative(selectedCase.GetName());
 
-            return (base.GetPropertyHeight(property, label) + EditorGUIUtility.standardVerticalSpacing) * (lineCount + (showConditionProperties ? propertiesLineCount : 0)) + (showConditionProperties ? base.GetPropertyHeight(selectedProp, label) : 0) + (boxMargin * 2);
+            return (base.GetPropertyHeight(property, label) + EditorGUIUtility.standardVerticalSpacing) * (lineCount + (showConditionProperties ? propertiesLineCount : 0)) + (showConditionProperties ? EditorGUI.GetPropertyHeight(selectedProp, label) : 0) + (boxMargin * 2);
         }
     }
 }

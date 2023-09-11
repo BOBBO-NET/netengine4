@@ -31,7 +31,7 @@ namespace BobboNet.Editor.Knowledge
             valueRect.x = indentStart;
             valueRect.width = indentWidth;
             valueRect.height = lineHeight;
-            valueRect.y += lineHeight;
+            valueRect.y += lineHeight + EditorGUIUtility.standardVerticalSpacing;
             EditorGUI.LabelField(valueRect, $"Current value: {knowledge?.GetCurrentValue()}", EditorStyles.helpBox);
 
             EditorGUI.EndProperty();
@@ -40,7 +40,7 @@ namespace BobboNet.Editor.Knowledge
 
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
         {
-            return base.GetPropertyHeight(property, label) * lineCount;
+            return (base.GetPropertyHeight(property, label) + EditorGUIUtility.standardVerticalSpacing) * lineCount;
         }
     }
 }

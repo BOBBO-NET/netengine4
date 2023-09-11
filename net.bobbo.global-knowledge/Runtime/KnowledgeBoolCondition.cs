@@ -11,12 +11,15 @@ namespace BobboNet.Knowledge
 
         [System.Serializable]
         public class CaseEquals : KnowledgeCaseGenericEquals<bool> { }
+        [System.Serializable]
+        public class CaseEqualsKnowledge : KnowledgeCaseGenericEqualsKnowledge<KnowledgeBool> { }
 
         //
         //  Public Properties
         //
 
         public new CaseEquals Equals;
+        public CaseEqualsKnowledge EqualsKnowledge;
 
         //
         //  Initialization
@@ -24,7 +27,8 @@ namespace BobboNet.Knowledge
 
         public override IEnumerable<IKnowledgeCase> GetCases() => new IKnowledgeCase[]
         {
-            Equals
+            Equals,
+            EqualsKnowledge
         };
     }
 }

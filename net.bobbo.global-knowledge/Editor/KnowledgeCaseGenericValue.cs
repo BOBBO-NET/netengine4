@@ -10,11 +10,9 @@ namespace BobboNet.Editor.Knowledge
     [CustomPropertyDrawer(typeof(KnowledgeCaseGenericLessThan<>), useForChildren: true)]
     [CustomPropertyDrawer(typeof(KnowledgeCaseGenericGreaterThan<>), useForChildren: true)]
     [CustomPropertyDrawer(typeof(KnowledgeCaseGenericEquals<>), useForChildren: true)]
+    [CustomPropertyDrawer(typeof(KnowledgeCaseGenericEqualsKnowledge<>), useForChildren: true)]
     public class KnowledgeCaseGenericValueDrawer : PropertyDrawer
     {
-        private const int lineCount = 1;
-
-
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
             float lineHeight = base.GetPropertyHeight(property, label);
@@ -26,13 +24,14 @@ namespace BobboNet.Editor.Knowledge
             labelRect = EditorGUI.PrefixLabel(labelRect, GUIUtility.GetControlID(FocusType.Passive), label);
             EditorGUI.PropertyField(labelRect, property.FindPropertyRelative("Value"), GUIContent.none);
 
+
             EditorGUI.EndProperty();
         }
 
 
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
         {
-            return base.GetPropertyHeight(property, label) * (lineCount);
+            return EditorGUI.GetPropertyHeight(property.FindPropertyRelative("Value"), label);
         }
     }
 }
