@@ -1,7 +1,8 @@
 {
     "name": "BobboNet.GlobalKnowledge",
     "references": [
-        "BobboNet.JSONData"
+        "BobboNet.JSONData",
+        "NaughtyAttributes.Core"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -316,6 +316,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 294484351}
+  - component: {fileID: 294484353}
   - component: {fileID: 294484352}
   m_Layer: 5
   m_Name: SliderLights
@@ -396,6 +397,21 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &294484353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294484350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08834985d5eac0741bd967c8182ba2d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  knowledgeAsFloat: {fileID: 0}
+  knowledgeAsInt: {fileID: 11400000, guid: 917e6206c8eae114a83cf892a70667ff, type: 2}
 --- !u!1 &507438163
 GameObject:
   m_ObjectHideFlags: 0
@@ -1617,6 +1633,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2098233935}
+  - component: {fileID: 2098233937}
   - component: {fileID: 2098233936}
   m_Layer: 5
   m_Name: SliderSpeed
@@ -1697,6 +1714,21 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2098233937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098233934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08834985d5eac0741bd967c8182ba2d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  knowledgeAsFloat: {fileID: 11400000, guid: b6dbfc2aff62a7446ae22630f99282c8, type: 2}
+  knowledgeAsInt: {fileID: 0}
 --- !u!1 &2132232317
 GameObject:
   m_ObjectHideFlags: 0
