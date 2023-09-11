@@ -7,8 +7,8 @@ using System.Linq;
 
 namespace BobboNet.Editor.Knowledge
 {
-    [CustomPropertyDrawer(typeof(KnowledgeConditionGeneric), useForChildren: true)]
-    public class KnowledgeConditionGenericDrawer : PropertyDrawer
+    [CustomPropertyDrawer(typeof(KnowledgeCondition<>), useForChildren: true)]
+    public class KnowledgeConditionDrawer : PropertyDrawer
     {
         private const int lineCount = 1;
         private const int propertiesLineCount = 1;
@@ -19,38 +19,25 @@ namespace BobboNet.Editor.Knowledge
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
             float lineHeight = base.GetPropertyHeight(property, label);
-            var knowledgeConditionGeneric = EditorHelper.GetTargetObjectOfProperty(property) as KnowledgeConditionGeneric;
+            var knowledgeCondition = EditorHelper.GetTargetObjectOfProperty(property) as IKnowledgeCondition;
+            var targetKnowledgeProp = property.FindPropertyRelative("TargetKnowledge");
+
             EditorGUI.BeginProperty(position, label, property);
 
+            // Draw Object Field
             Rect labelRect = position;
-            labelRect.height = EditorGUIUtility.singleLineHeight;
+            labelRect.height = lineHeight;
             showConditionProperties = EditorGUI.Foldout(labelRect, showConditionProperties, label);
+            // labelRect = EditorGUI.PrefixLabel(labelRect, GUIUtility.GetControlID(FocusType.Passive), label);
             labelRect.x += EditorGUIUtility.labelWidth;
             labelRect.width -= EditorGUIUtility.labelWidth;
+            float indentStart = labelRect.x;
+            float indentWidth = labelRect.width;
+            EditorGUI.ObjectField(labelRect, targetKnowledgeProp, GUIContent.none);
 
-            // Draw the field for the target knowledge
-            var resolvedCondition = knowledgeConditionGeneric.Get();
-            var resolvedTarget = resolvedCondition != null ? resolvedCondition.GetTargetKnowledge() : null;
-            ScriptableKnowledgeObject selectedObject = (ScriptableKnowledgeObject)EditorGUI.ObjectField(labelRect, GUIContent.none, resolvedTarget as Object, typeof(ScriptableKnowledgeObject), false);
-
-            // Set the type property based on the selected object
-            var typeProp = property.FindPropertyRelative("Type");
-            if (selectedObject != null)
+            if (showConditionProperties)
             {
-                typeProp.enumValueIndex = ArrayUtility.IndexOf(typeProp.enumNames, selectedObject.GetType().Name);
-                var resolvedConditionProp = property.FindPropertyRelative($"condition{typeProp.enumNames[typeProp.enumValueIndex]}");
-                resolvedConditionProp.FindPropertyRelative("TargetKnowledge").objectReferenceValue = selectedObject;
-            }
-            else
-            {
-                typeProp.enumValueIndex = 0;
-            }
-
-            if (showConditionProperties && typeProp.enumValueIndex != 0)
-            {
-                var resolvedConditionProp = property.FindPropertyRelative($"condition{typeProp.enumNames[typeProp.enumValueIndex]}");
-                var knowledgeCondition = EditorHelper.GetTargetObjectOfProperty(resolvedConditionProp) as IKnowledgeCondition;
-                var targetCaseProp = resolvedConditionProp.FindPropertyRelative("TargetCase");
+                var targetCaseProp = property.FindPropertyRelative("TargetCase");
                 IKnowledgeCase selectedCase = null;
                 SerializedProperty selectedProp = null;
                 string[] arrayOfNames = new string[0];
@@ -60,7 +47,7 @@ namespace BobboNet.Editor.Knowledge
                 {
                     arrayOfNames = knowledgeCondition.GetCases().Select(knowledgeCase => knowledgeCase.GetName()).ToArray();
                     selectedCase = knowledgeCondition.GetCases().ToArray()[targetCaseProp.intValue];
-                    selectedProp = resolvedConditionProp.FindPropertyRelative(selectedCase.GetName());
+                    selectedProp = property.FindPropertyRelative(selectedCase.GetName());
 
                     additionalBoxHeight = EditorGUI.GetPropertyHeight(selectedProp, label);
                 }
@@ -69,7 +56,7 @@ namespace BobboNet.Editor.Knowledge
                 Rect backgroundRect = position;
                 backgroundRect.x += 20;
                 backgroundRect.width -= 20;
-                backgroundRect.height = (boxMargin * 2) + (base.GetPropertyHeight(resolvedConditionProp, label) + EditorGUIUtility.standardVerticalSpacing) * propertiesLineCount + additionalBoxHeight;
+                backgroundRect.height = (boxMargin * 2) + (base.GetPropertyHeight(property, label) + EditorGUIUtility.standardVerticalSpacing) * propertiesLineCount + additionalBoxHeight;
                 backgroundRect.y += lineHeight + EditorGUIUtility.standardVerticalSpacing;
                 EditorGUI.HelpBox(backgroundRect, "", MessageType.None);
 
@@ -92,7 +79,7 @@ namespace BobboNet.Editor.Knowledge
                     targetCaseProp.intValue = EditorGUI.Popup(caseDropdownRect, targetCaseProp.intValue, arrayOfNames);
 
                     selectedCase = knowledgeCondition.GetCases().ToArray()[targetCaseProp.intValue];
-                    selectedProp = resolvedConditionProp.FindPropertyRelative(selectedCase.GetName());
+                    selectedProp = property.FindPropertyRelative(selectedCase.GetName());
                     EditorGUI.PropertyField(caseValRect, selectedProp);
                 }
             }
@@ -103,13 +90,10 @@ namespace BobboNet.Editor.Knowledge
 
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
         {
-            var typeProp = property.FindPropertyRelative("Type");
-            var resolvedConditionProp = property.FindPropertyRelative($"condition{typeProp.enumNames[typeProp.enumValueIndex]}");
-
-            var knowledgeCondition = EditorHelper.GetTargetObjectOfProperty(resolvedConditionProp) as IKnowledgeCondition;
-            var targetCaseProp = resolvedConditionProp.FindPropertyRelative("TargetCase");
+            var knowledgeCondition = EditorHelper.GetTargetObjectOfProperty(property) as IKnowledgeCondition;
+            var targetCaseProp = property.FindPropertyRelative("TargetCase");
             var selectedCase = knowledgeCondition.GetCases().ToArray()[targetCaseProp.intValue];
-            var selectedProp = resolvedConditionProp.FindPropertyRelative(selectedCase.GetName());
+            var selectedProp = property.FindPropertyRelative(selectedCase.GetName());
 
             return (base.GetPropertyHeight(property, label) + EditorGUIUtility.standardVerticalSpacing) * (lineCount + (showConditionProperties ? propertiesLineCount : 0)) + (showConditionProperties ? EditorGUI.GetPropertyHeight(selectedProp, label) : 0) + (showConditionProperties ? (boxMargin * 2) : 0);
         }

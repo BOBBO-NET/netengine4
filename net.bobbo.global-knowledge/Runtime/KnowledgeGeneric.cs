@@ -3,12 +3,14 @@ using UnityEngine.Events;
 
 namespace BobboNet.Knowledge
 {
+    public abstract class ScriptableKnowledgeObject : ScriptableObject { }
+
     /// <summary>
     /// A ScriptableObject based implementation of Knowledge. This holds knowledge as an asset so that it
     /// can be referenced easily in the Unity inspector. Runtime values are not saved outside of play mode.
     /// </summary>
     /// <typeparam name="T">The type of the held knowledge.</typeparam>
-    public abstract class KnowledgeGeneric<T> : ScriptableObject, IKnowledge
+    public abstract class KnowledgeGeneric<T> : ScriptableKnowledgeObject, IKnowledge
     {
         private class ValueChangedUnityEvent : UnityEvent<T> { }
 

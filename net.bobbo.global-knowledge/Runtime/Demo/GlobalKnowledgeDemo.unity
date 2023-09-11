@@ -418,6 +418,49 @@ MonoBehaviour:
       Value: 0
     LessThan:
       Value: 0
+    EqualsKnowledge:
+      Value: {fileID: 0}
+  newConditionB:
+    TargetKnowledge: {fileID: 0}
+    TargetCase: 1
+    Equals:
+      Value: 0
+    EqualsKnowledge:
+      Value: {fileID: 0}
+  newConditionC:
+    Type: 3
+    conditionKnowledgeFloat:
+      TargetKnowledge: {fileID: 11400000, guid: b6dbfc2aff62a7446ae22630f99282c8,
+        type: 2}
+      TargetCase: 0
+      Equals:
+        Value: 0
+      GreaterThan:
+        Value: 0
+      LessThan:
+        Value: 0
+      EqualsKnowledge:
+        Value: {fileID: 0}
+    conditionKnowledgeInt:
+      TargetKnowledge: {fileID: 11400000, guid: 917e6206c8eae114a83cf892a70667ff,
+        type: 2}
+      TargetCase: 0
+      Equals:
+        Value: 0
+      GreaterThan:
+        Value: 0
+      LessThan:
+        Value: 0
+      EqualsKnowledge:
+        Value: {fileID: 0}
+    conditionKnowledgeBool:
+      TargetKnowledge: {fileID: 11400000, guid: 91fd184a0b646984a971fecf0c33fad8,
+        type: 2}
+      TargetCase: 0
+      Equals:
+        Value: 0
+      EqualsKnowledge:
+        Value: {fileID: 0}
   type: 1
   knowledgeAsFloat: {fileID: 0}
   knowledgeAsInt: {fileID: 11400000, guid: 917e6206c8eae114a83cf892a70667ff, type: 2}
@@ -1758,6 +1801,46 @@ MonoBehaviour:
       Value: 0
     LessThan:
       Value: 0
+    EqualsKnowledge:
+      Value: {fileID: 0}
+  newConditionB:
+    TargetKnowledge: {fileID: 0}
+    TargetCase: 0
+    Equals:
+      Value: 0
+    EqualsKnowledge:
+      Value: {fileID: 0}
+  newConditionC:
+    Type: 0
+    conditionKnowledgeFloat:
+      TargetKnowledge: {fileID: 0}
+      TargetCase: 0
+      Equals:
+        Value: 0
+      GreaterThan:
+        Value: 0
+      LessThan:
+        Value: 0
+      EqualsKnowledge:
+        Value: {fileID: 0}
+    conditionKnowledgeInt:
+      TargetKnowledge: {fileID: 0}
+      TargetCase: 0
+      Equals:
+        Value: 0
+      GreaterThan:
+        Value: 0
+      LessThan:
+        Value: 0
+      EqualsKnowledge:
+        Value: {fileID: 0}
+    conditionKnowledgeBool:
+      TargetKnowledge: {fileID: 0}
+      TargetCase: 0
+      Equals:
+        Value: 0
+      EqualsKnowledge:
+        Value: {fileID: 0}
   type: 0
   knowledgeAsFloat: {fileID: 11400000, guid: b6dbfc2aff62a7446ae22630f99282c8, type: 2}
   knowledgeAsInt: {fileID: 0}

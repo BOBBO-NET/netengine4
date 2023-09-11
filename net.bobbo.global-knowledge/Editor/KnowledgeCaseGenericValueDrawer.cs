@@ -24,7 +24,6 @@ namespace BobboNet.Editor.Knowledge
             labelRect = EditorGUI.PrefixLabel(labelRect, GUIUtility.GetControlID(FocusType.Passive), label);
             EditorGUI.PropertyField(labelRect, property.FindPropertyRelative("Value"), GUIContent.none);
 
-
             EditorGUI.EndProperty();
         }
 

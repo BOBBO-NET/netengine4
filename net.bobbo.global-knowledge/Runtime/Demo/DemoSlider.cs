@@ -13,9 +13,6 @@ namespace BobboNet.Knowledge.Demo
             Int
         }
 
-        // public GlobalKnowledgeCondition conditon;
-        public KnowledgeFloatCondition newCondition;
-        public KnowledgeBoolCondition newConditionB;
 
         public Type type;
 

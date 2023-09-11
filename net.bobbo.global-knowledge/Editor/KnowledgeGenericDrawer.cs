@@ -26,7 +26,7 @@ namespace BobboNet.Editor.Knowledge
             EditorGUI.PropertyField(labelRect, property, GUIContent.none);
 
             // Draw the current value
-            var knowledge = property.objectReferenceValue as IKnowledge;
+            var knowledge = EditorHelper.GetTargetObjectOfProperty(property) as IKnowledge;
             Rect valueRect = position;
             valueRect.x = indentStart;
             valueRect.width = indentWidth;
