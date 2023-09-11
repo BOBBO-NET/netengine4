@@ -11,7 +11,7 @@ using UnityEngine.InputSystem;
 
 namespace BobboNet
 {
-    [RequireComponent(typeof(Canvas))]
+    [RequireComponent(typeof(Canvas), typeof(CanvasGroup))]
     public class DevConsoleManager : MonoBehaviour
     {
         [System.Serializable]
@@ -35,6 +35,7 @@ namespace BobboNet
         private Settings settings;
         private DevConsoleLogic consoleLogic;
         private Canvas canvas;
+        private CanvasGroup canvasGroup;
         private bool consoleOpened = false;
         private bool flagLogUpdate = false;
         private List<string> currentConsoleStrings;
@@ -56,6 +57,8 @@ namespace BobboNet
             canvas = GetComponent<Canvas>();
             canvas.sortingOrder = settings.sortingOrder;
 
+            canvasGroup = GetComponent<CanvasGroup>();
+
             foreach (TextMeshProUGUI textMesh in GetComponentsInChildren<TextMeshProUGUI>())
             {
                 textMesh.font = settings.font;
@@ -64,6 +67,8 @@ namespace BobboNet
             // Setup components
             currentConsoleStrings = new List<string>();
             inputField.onEndEdit.AddListener(OnInputFieldEndEdit);
+
+            SetState(false);
         }
 
         private void OnEnable()
@@ -126,7 +131,9 @@ namespace BobboNet
         public void SetState(bool isOpen)
         {
             consoleOpened = isOpen;
-            canvas.enabled = isOpen;
+            canvasGroup.alpha = isOpen ? 1.0f : 0.0f;
+            canvasGroup.interactable = isOpen;
+            canvasGroup.blocksRaycasts = isOpen;
 
             if (isOpen)
             {
